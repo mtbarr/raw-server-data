@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargos do Servidor</title>
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Estilos customizados -->
+    <style>
+        body {
+            background-color: #18172a;
+            /* Cor de fundo modo escuro */
+            color: #ffffff;
+            /* Cor do texto modo escuro */
+            padding-top: 50px;
+            /* Para ajustar o espaço do navbar se houver */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #1f2437;
+            /* Cor do card */
+            color: #ffffff;
+            /* Cor do texto dentro do card */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--Número	Descrição da Regra	Tipo de Punição-->
+<!--1	Respeitar todos os jogadores e membros da comunidade.	Warn-->
+<!--2	Não destruir construções de outros jogadores sem permissão.	TempBan-->
+<!--3	Proibido o uso de cheats, hacks ou mods que dão vantagens injustas.	Ban-->
+<!--4	Evitar spam ou flood no chat.	Mute-->
+<!--5	Não discriminar com base em raça, gênero, religião, etc.	TempBan-->
+<!--6	Não divulgar informações pessoais ou comprometer a segurança do servidor.	Mute-->
+<!--7	Seguir as instruções e decisões dos administradores.	Warn-->
+<!--8	Respeitar as áreas designadas para PvP ou construções específicas.	Warn-->
+<!--9	Não comercializar itens do jogo por dinheiro real.	Ban-->
+<!--10	Manter o ambiente do chat e do jogo livre de linguagem ofensiva ou inadequada.	Mute-->
+
+
+<div class="navbar-fixed">
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="index.html">Início</a></li>
+            <li class="tab"><a href="regras.html">Regras</a></li>
+            <li class="tab"><a href="equipe.html">Equipe</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <h1 class="center-align">Regras do Servidor</h1>
+</div>
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const rules = [
+            {
+                id: 1,
+                emoji: '🤝',
+                ruleName: 'Respeitar todos os jogadores e membros da comunidade.',
+                punishment: 'Warn (3/3)'
+            },
+            {
+                id: 2,
+                emoji: '🛡️',
+                ruleName: 'Proibido o uso de cheats, hacks ou mods que dão vantagens injustas.',
+                punishment: 'Banimento (Permanente)'
+            },
+            {
+                id: 3,
+                emoji: '🗣️',
+                ruleName: 'Evitar spam ou flood no chat.',
+                punishment: 'Mute (30 min, aumentando em 30 para cada repetição.)'
+            },
+            {
+                id: 4,
+                emoji: '🚫',
+                ruleName: 'Não discriminar com base em raça, gênero, religião, etc.',
+                punishment: 'Banimento (Permanente)'
+            },
+            {
+                id: 5,
+                emoji: '🔒',
+                ruleName: 'Não divulgar informações pessoais ou comprometer a segurança do servidor.',
+                punishment: 'Banimento (Permanente)'
+            },
+            {
+                id: 6,
+                emoji: '💸',
+                ruleName: 'Não comercializar itens do jogo por dinheiro real.',
+                punishment: 'Banimento (Permanente)'
+            },
+
+        ];
+
+        const rulesContainer = document.querySelector('.container');
+
+        rules.forEach(rule => {
+            const card = document.createElement('div');
+            card.classList.add('col', 's12');
+            card.innerHTML = `
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title"><i class="material-icons">${rule.emoji}</i> ${rule.ruleName}</span>
+                    <p>Tipo de Punição (Caso quebre a regra): ${rule.punishment}</p>
+                </div>
+            </div>
+        `
+            rulesContainer.innerHTML += card.outerHTML;
+        })
+    })
+</script>
+
+</html>
