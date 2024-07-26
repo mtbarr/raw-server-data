@@ -4,45 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff do Servidor</title>
-    <!-- Material Design CSS -->
+    <title>Equipe do Servidor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Estilos customizados -->
     <style>
         body {
             background-color: #18172a;
-            /* Cor de fundo modo escuro */
             color: #ffffff;
-            /* Cor do texto modo escuro */
-            padding-top: 50px;
-            /* Para ajustar o espaço do navbar se houver */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        .navbar-fixed {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .container {
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 100px auto 0;
         }
 
         .staff-card {
             background-color: #1f2437;
-            /* Cor do card */
             color: #ffffff;
-
-            /* deixar um pouco maior */
             padding: 20px;
-
             border-radius: 10px;
-
-            /* Cor do texto dentro do card */
             margin-bottom: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .staff-card img {
             width: 100px;
             height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .staff-card h5 {
+            margin-top: 0;
+        }
+
+        .staff-card p {
+            margin: 0;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -50,70 +64,57 @@
 <body>
 
 <div class="navbar-fixed">
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="index.html">Início</a></li>
-            <li class="tab"><a href="regras.html">Regras</a></li>
-            <li class="tab"><a href="equipe.html">Equipe</a></li>
-        </ul>
-    </div>
+    <nav class="nav-extended deep-purple darken-4">
+        <div class="nav-wrapper">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="index.html">Início</a></li>
+                <li class="tab"><a href="regras.html">Regras</a></li>
+                <li class="tab"><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
 
-    
 <div class="container">
-    <h1 class="center-align">Staff do Servidor</h1>
+    <h1 class="center-align">👥 Equipe do Servidor</h1>
 
     <div class="row" id="staff-container">
-        <!-- Cards serão gerados aqui -->
     </div>
 </div>
 
-<!-- Materialize JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<!-- JavaScript para gerar os cards -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-
-        const roleColors = [
-            {name: 'Game Master', color: '#f38b02'},
-            {name: 'Administrador', color: '#ff0707'},
-            {name: 'Moderador', color: '#25ab03'}
-        ]
+        const roleColors = {
+            'Game Master': '#f38b02',
+            'Administrador': '#ff0707',
+            'Moderador': '#25ab03'
+        };
 
         const staffMembers = [
-            {name: 'phantaminon', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/sxsk/100'},
-            {name: 'IWhitexvnzla', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/IWhitexvnzla/100'},
-            {name: 'BaianorUrahara', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/BaianorUrahara/100'},
-
-            {name: 'SirAnonimato', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/SirAnonimato/100'},
-
-            {name: 'Caiooo1_', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/Caiooo1_/100'},
-            {name: 'Hemorragia_', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/Hemorragia_/100'},
-
-            {name: 'JustZambao', role: 'Moderador', skinUrl: 'https://minotar.net/avatar/technoblade/100'},
-            {name: 'tryhard', role: 'Moderador', skinUrl: 'https://minotar.net/avatar/tryhard/100'},
-            {name: '_P_R_O_E_R_D_', role: 'Moderador', skinUrl: 'https://minotar.net/avatar/_P_R_O_E_R_D_/100'},
-
+            { name: 'phantaminon', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/sxsk/100' },
+            { name: 'IWhitexvnzla', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/IWhitexvnzla/100' },
+            { name: 'BaianorUrahara', role: 'Game Master', skinUrl: 'https://minotar.net/avatar/BaianorUrahara/100' },
+            { name: 'SirAnonimato', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/SirAnonimato/100' },
+            { name: 'Caiooo1_', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/Caiooo1_/100' },
+            { name: 'Hemorragia_', role: 'Administrador', skinUrl: 'https://minotar.net/avatar/Hemorragia_/100' },
+            { name: 'tryhard', role: 'Moderador', skinUrl: 'https://minotar.net/avatar/tryhard/100' },
+            { name: '_P_R_O_E_R_D_', role: 'Moderador', skinUrl: 'https://minotar.net/avatar/_P_R_O_E_R_D_/100' },
         ];
-
-        function getColorFromStaffRole(role) {
-            const roleColor = roleColors.find(roleColor => roleColor.name === role);
-            return roleColor ? roleColor.color : '#ffffff';
-        }
 
         const staffContainer = document.getElementById('staff-container');
 
         staffMembers.forEach(member => {
             const cardHtml = `
-        <div class="col s12 m6 l4">
-          <div class="staff-card">
-            <img src="${member.skinUrl}" alt="${member.name} Skin">
-            <h5>${member.name}</h5>
-            <p style="color: ${getColorFromStaffRole(member.role)}; font: 100px">${member.role}</p>
+          <div class="col s12 m6 l4">
+            <div class="staff-card">
+              <img src="${member.skinUrl}" alt="${member.name} Skin">
+              <h5>${member.name}</h5>
+              <p style="color: ${roleColors[member.role] || '#ffffff'};">${member.role}</p>
+            </div>
           </div>
-        </div>
-      `;
+        `;
             staffContainer.innerHTML += cardHtml;
         });
     });
