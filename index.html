@@ -5,30 +5,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cargos do Servidor</title>
-  <!-- Material Design CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Estilos customizados -->
   <style>
     body {
-      background-color: #18172a;
-      /* Cor de fundo modo escuro */
+      background-image: url('https://cdn.discordapp.com/attachments/1266374779514916924/1266374809579688106/image.png?ex=66a4eaf2&is=66a39972&hm=6588f0f9d18a039c209e7d8c1ff51e13e186d57c840e9031f516cd0b191796cb&');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       color: #ffffff;
-      /* Cor do texto modo escuro */
-      padding-top: 50px;
-      /* Para ajustar o espaço do navbar se houver */
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-fixed {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .tabs .tab a {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .tabs .tab a.active {
+      color: #ffab00;
     }
 
     .container {
       max-width: 800px;
-      margin: auto;
+      margin: 100px auto 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .card {
       background-color: #1f2437;
-      /* Cor do card */
       color: #ffffff;
-      /* Cor do texto dentro do card */
       margin-bottom: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.4em;
+    }
+
+    .card-title i {
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -36,80 +81,69 @@
 <body>
 
 <div class="navbar-fixed">
-  <div class="nav-content">
-    <ul class="tabs tabs-transparent">
-      <li class="tab"><a href="index.html">Início</a></li>
-      <li class="tab"><a href="regras.html">Regras</a></li>
-      <li class="tab"><a href="equipe.html">Equipe</a></li>
-    </ul>
+  <nav class="nav-extended deep-purple darken-4">
+    <div class="nav-wrapper">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="index.html">Início</a></li>
+        <li class="tab"><a href="equipe.html">Equipe</a></li>
+        <li class="tab"><a href="modpack.html">Modpack</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <h1 class="section-title">💼 Cargos da Staff</h1>
+
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">👑</i> Game Master</span>
+          <p>É a autoridade máxima no servidor, coordenando todos os aspectos do jogo e garantindo que as regras sejam seguidas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">🛠️</i> Administrador</span>
+          <p>Mantêm a ordem e o desenvolvimento contínuo do servidor. Eles têm permissões avançadas, incluindo banimento de jogadores.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">🛡️</i> Moderador</span>
+          <p>Ajudam a manter a comunidade segura, aplicando regras e moderando comportamentos inapropriados, exceto banimentos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">🤝</i> Ajudante</span>
+          <p>Oferecem suporte aos jogadores, respondendo perguntas e ajudando na navegação pelo servidor. Eles têm permissões limitadas, tendo a mesma função do estagiário.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><i class="material-icons">📚</i> Estagiário</span>
+          <p>São novos membros da equipe, aprendendo as funções e regras do servidor. Eles ajudam respondendo perguntas e se familiarizando com as operações do servidor.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-
-<div class="container">
-  <h1 class="center-align">Staff do Servidor</h1>
-
-    <div class="row">
-      <!-- Card para GM -->
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title"><i class="material-icons">👑</i> Game Master</span>
-            <p>Responsável pelas operações internas e tomar decisões importantes para o desenvolvimento do servidor.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card para ADM -->
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title"><i class="material-icons">🛠️</i> Administrador</span>
-            <p>Para ser ADM, é preciso ter uma capacidade que seja pilar para o desenvolvimento do servidor. Terá
-              permissão de banimento e funções específicas como Builder. É um cargo de extrema importância.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card para Mod -->
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title"><i class="material-icons">🛡️</i> Moderador</span>
-            <p>Em uma semana como Ajudante, caso seja necessário e também apto ao cargo, o indivíduo será promovido para
-              Moderador. Receberá permissões associadas às punições, exceto o banimento. O tempo recomendado é de duas
-              horas diariamente.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card para Ajudante -->
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title"><i class="material-icons">🤝</i> Ajudante</span>
-            <p>Normalmente é obtido depois de uma semana completa como Estagiário. Terá permissões de teletransporte,
-              mas sua função principal é a mesma dos estagiários. O tempo recomendado é de duas horas diariamente.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card para Estagiário -->
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title"><i class="material-icons">📚</i> Estagiário</span>
-            <p>O cargo inicial é obtido após o formulário ou por recomendação. Ele não possui permissão nenhuma, tendo a
-              obrigação de responder às dúvidas. O tempo recomendado é de três horas diariamente.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Materialize JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 

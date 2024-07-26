@@ -9,10 +9,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
-            background-color: #18172a;
+            background-image: url('https://cdn.discordapp.com/attachments/1266374779514916924/1266386728147488850/wallpaper_site.jpg?ex=66a4f60c&is=66a3a48c&hm=849b5d1964a94e7f62d44536e6426501f239a4ad364e86170f7c66a01a9cf2b4&');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             color: #ffffff;
             font-family: 'Roboto', sans-serif;
             margin: 0;
+            padding: 0;
         }
 
         .navbar-fixed {
@@ -22,9 +26,28 @@
             z-index: 1000;
         }
 
+        .tabs .tab a {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .tabs .tab a.active {
+            color: #ffab00;
+        }
+
         .container {
             max-width: 900px;
             margin: 100px auto 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .staff-card {
@@ -48,10 +71,12 @@
             height: 100px;
             border-radius: 50%;
             margin-bottom: 15px;
+            border: 2px solid #ffab00;
         }
 
         .staff-card h5 {
             margin-top: 0;
+            font-size: 1.4em;
         }
 
         .staff-card p {
@@ -68,17 +93,18 @@
         <div class="nav-wrapper">
             <ul class="tabs tabs-transparent">
                 <li class="tab"><a href="index.html">Início</a></li>
-                <li class="tab"><a href="regras.html">Regras</a></li>
-                <li class="tab"><a href="equipe.html">Equipe</a></li>
+                <li class="tab"><a href="equipe.html" class="active">Equipe</a></li>
+                <li class="tab"><a href="modpack.html">Modpack</a></li>
             </ul>
         </div>
     </nav>
 </div>
 
 <div class="container">
-    <h1 class="center-align">👥 Equipe do Servidor</h1>
+    <h1 class="section-title">👥 Equipe do Servidor</h1>
 
     <div class="row" id="staff-container">
+        <!-- Staff cards will be inserted here dynamically -->
     </div>
 </div>
 
