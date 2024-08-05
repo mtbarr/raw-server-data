@@ -14,7 +14,7 @@
         },
         {
           "type": "SERVER",
-          "url": "https://www.dropbox.com/scl/fi/d21kt2s6pj1pq07d4fi1t/modpack.zip?rlkey=oc9k3fp9akg80hk5ppun3fpte&st=8aru1xow&dl=1"
+          "url": "https://s3.filebin.net/filebin/09d80969779818d0d1d6a1adf481d1877b4f50039b7c1c63684e2b10c9033dd0/e32d3d3cd982aed9e154a0c27dbe119bd13fe0de90f48a13f54141177dd0c817?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7pMj6hGeoKewqmMQILjm%2F20240805%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240805T141746Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D60&response-content-disposition=filename%3D%22modpack.zip%22&response-content-type=application%2Fzip&X-Amz-Signature=f5a1288183207c25f89a4e760115bfde82e08f841769f7ef0e1c7a4f53c6ec3a"
         }
       ]
     }
